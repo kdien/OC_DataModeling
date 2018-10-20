@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script
+        src="https://code.jquery.com/jquery-3.3.1.js"
+        integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+        crossorigin="anonymous"></script>
+    <title></title>
+</head>
+<body>
+    <header>
+
+    </header>
+
+    <nav>
+
+    </nav>
+
+    <main>
+        <div id="assignment1">
+            <h2>Review Questions</h2>
+            <ol>
+                <li>
+                    A database is an electronic collection of data that’s organized and stored in a specific structure. E.g. a database used to keep track of all the company’s inventory
+                </li>
+                <li>
+                    <ul>
+                        <li>
+                            <strong><em>Data: </em></strong>consists of unprocessed facts that have no meaning to the end user.
+                        </li>
+                        <li>
+                            <strong><em>Field: </em></strong>a character or attribute with specific meaning used to define and store data.
+                        </li>
+                        <li>
+                            <strong><em>Record: </em></strong>a set of one or more fields, representing one connected piece of data.
+                        </li>
+                        <li>
+                            <strong><em>File: </em></strong>a collection of related records.
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    A database management system (DBMS) is a program or collection of programs used for managing databases and enabling the end user to access and manipulate data stored in those databases.
+                </li>
+                <li>
+                    Database design is an important step to define the structure of the database, which determines how accurately and meaningfully the data is reflected. Poorly-designed databases may cause errors that ultimately affect the decisions made for the business.
+                </li>
+                <li>
+                    Data is just raw facts with no meaning to the end user. Information is data that has been processed to reveal meaning based on specific context. Database is the collection of organized (processed) data.
+                </li>
+            </ol>
+
+            <h2>Problems</h2>
+            <ol>
+                <li>The table contains 7 records and there are 5 fields per record.</li>
+                <li>
+                    <ol>
+                        <li>The city name is nested within a much larger block of data, creating more work just to parse out the data you want.</li>
+                        <li>Break the MANAGER_ADDRESS into separate columns (ie. one for street address, city, state, zip code.</li>
+                    </ol>
+                </li>
+                <li>
+                    <ol>
+                        <li>PROJECT_MANAGER column would need to be separated into a first and last name column.</li>
+                        <li>MANAGER_PHONE would need to be separated into a column for the first 3 digits and one for the last 6 digits.</li>
+                        <li>MANAGER_ADDRESS would need to be broken down into street address, city, state, and zip code.</li>
+                    </ol>
+                </li>
+                <li>There are PROJECT_MANAGERs being assigned to more than one PROJECT_CODE, resulting in a duplication of data. This can lead to possible anomalies of having different versions of the same data when not all of the targeted data is uploaded, inserted, or deleted.</li>
+                <li>Every column in the table structure, except PROJ_HOURS, contains duplicated data. There is an EMP_NUM that has different EMP_PHONE numbers at 2 different records and some that have different JOB_CHG_HOUR but the same JOB_CODE.</li>
+                <li>EMP_NAME should be separated into first name, last name, and initial. EMP_PHONE should be separated into area code and the phone number. This will allow greater organization and manipulation of the data, as it would not have to be parsed from a string.</li>
+                <li>There are redundancies in the TEACHER_LNAME, TEACHER_FNAME, and TEACHER_INITIAL columns. If you wanted to change any of these entries you would have to ensure you select all existing entries. It would be better for all the teachers’ information to be in a separate table and only referenced by ID to this table.</li>
+                <li>If all entries of BUILDING_CODE “KOM” were deleted, the relationships between them and DAYS_TIME and ROOM_CODE entries would be gone. Data would no longer be standard amongst the records due to the deletion, possibly leading to more anomalies in the future.</li>
+                <li>
+                    A professor can teach many classes. A class can only be taught by one professor.<br>
+                    A professor can advise many students. A student can only be advised by one professor.
+                </li>
+                <li>
+                    <br>
+                    <img src="img/assignment1/Problem1.10.jpg" alt="Professor-Class and Professor-Student relationships">
+                </li>
+                <li>
+                    An employee can write many invoices. An invoice can only be written by one employee.<br>
+                    A customer can pay many invoices. An invoice can only be paid by one customer.
+                </li>
+                <li>
+                    <ol>
+                        <li>
+                            <br>
+                            <img src="img/assignment1/Problem1.12a.jpg" alt="Division-Department and Department-Employee relationships">
+                        </li>
+                        <li>
+                            <br>
+                            <img src="img/assignment1/Problem1.12b.jpg" alt="Customer-Videotape relationship">
+                        </li>
+                        <li>
+                            <br>
+                            <img src="img/assignment1/Problem1.12c.jpg" alt="Airliner-Flight relationship">
+                        </li>
+                        <li>
+                            <br>
+                            <img src="img/assignment1/Problem1.12d.jpg" alt="Region-Factory and Factory-Employee relationships">
+                        </li>
+                    </ol>
+                </li>
+            </ol>
+        </div>
+
+        <div id="assignment2">
+            <h2>Review Questions</h2>
+            <ol>
+                <li>
+                    A database presents data in a logical way, creating relationships between entities.<br>
+                    A table is simply a structure composed of rows and columns that hold groups of related records and fields.
+                </li>
+                <li>Entity integrity refers to an entity that has a unique primary key that can be used to access records. Referential integrity refers to relationships between entities that use foreign keys that match their parent primary keys, ensuring that the correct data is delivered between those entities.</li>
+                <li>Entity integrity is important as it prevents false determination of records within a single entity. Referential integrity is important as databases make it impossible to delete entries in a table that is linked to a foreign key in another entity.</li>
+                <li>
+                    <br>
+                    <img src="img/assignment2/Review2.4.jpg" alt="Student-Professor relationship">
+                </li>
+                <li>
+                    <br>
+                    <img src="img/assignment2/Review2.5.jpg" alt="Driver-Trip and Truck-Trip relationships">
+                </li>
+                <li>
+                    Implement a foreign key into the table which will have many, linking to the primary key of the table with the one relationship. E.g. one director can have many actors working under him <br>
+                    <img src="img/assignment2/Review2.6.jpg" alt="Director-Actor relationship">
+                </li>
+                <li>
+                    Entity: EMPLOYEE<br>
+                    Attribute: EMP_NUM, EMP_LNAME, EMP_INITIAL, EMP_FNAME, DEPT_CODE, JOB_CODE<br>
+                    Primary Key: EMP_NUM<br>
+                    Foreign Keys: DEPT_CODE and JOB_CODE
+                </li>
+                <li>
+                    <br>
+                    <table>
+                        <tr>
+                            <th>TABLE</th>
+                            <th>PRIMARY KEY</th>
+                            <th>FOREIGN KEY(S)</th>
+                        </tr>
+                        <tr>
+                            <td>DIRECTOR</td>
+                            <td>DIR_NUM</td>
+                            <td>NONE</td>
+                        </tr>
+                        <tr>
+                            <td>PLAY</td>
+                            <td>PLAY_CODE</td>
+                            <td>DIR_NUM</td>
+                        </tr>
+                    </table>
+                    <br>
+                    <img src="img/assignment2/Review2.8.jpg" alt="Director-Play relationship">
+                </li>
+            </ol>
+
+            <h2>Problems</h2>
+            <ol>
+                <li>
+                    <br>
+                    <table>
+                        <tr>
+                            <th>TABLE</th>
+                            <th>PRIMARY KEY</th>
+                            <th>FOREIGN KEY(S)</th>
+                        </tr>
+                        <tr>
+                            <td>EMPLOYEE</td>
+                            <td>EMP_CODE</td>
+                            <td>JOB_CODE</td>
+                        </tr>
+                        <tr>
+                            <td>BENEFIT</td>
+                            <td>EMP_CODE, PLAN_CODE</td>
+                            <td>EMP_CODE, PLAN_CODE</td>
+                        </tr>
+                        <tr>
+                            <td>JOB</td>
+                            <td>JOB_CODE</td>
+                            <td>NONE</td>
+                        </tr>
+                        <tr>
+                            <td>PLAN</td>
+                            <td>PLAN_CODE</td>
+                            <td>NONE</td>
+                        </tr>
+                    </table>
+                </li>
+                <li>
+                    <br>
+                    <img src="img/assignment2/Problem2.2.jpg" alt="Employee-Job relationship">
+                </li>
+                <li>
+                    <br>
+                    <table>
+                        <tr>
+                            <th>TABLE</th>
+                            <th>ENTITY INTEGRITY</th>
+                            <th>EXPLANATION</th>
+                        </tr>
+                        <tr>
+                            <td>EMPLOYEE</td>
+                            <td>Yes</td>
+                            <td>The primary key (EMP_CODE) uniquely identifies the records</td>
+                        </tr>
+                        <tr>
+                            <td>BENEFIT</td>
+                            <td>Yes</td>
+                            <td>The primary key (EMP_CODE, PLAN_CODE) uniquely identifies the records</td>
+                        </tr>
+                        <tr>
+                            <td>JOB</td>
+                            <td>Yes</td>
+                            <td>The primary key (JOB_CODE) uniquely identifies the records</td>
+                        </tr>
+                        <tr>
+                            <td>PLAN</td>
+                            <td>Yes</td>
+                            <td>The primary key (PLAN_CODE) uniquely identifies the records</td>
+                        </tr>
+                    </table>
+                </li>
+                <li>
+                    <br>
+                    <table>
+                        <tr>
+                            <th>TABLE</th>
+                            <th>REFERENTIAL INTEGRITY</th>
+                            <th>EXPLANATION</th>
+                        </tr>
+                        <tr>
+                            <td>EMPLOYEE</td>
+                            <td>Yes</td>
+                            <td>All foreign key matches its value in the parent table</td>
+                        </tr>
+                        <tr>
+                            <td>BENEFIT</td>
+                            <td>Yes</td>
+                            <td>All foreign key matches its value in the parent table</td>
+                        </tr>
+                        <tr>
+                            <td>JOB</td>
+                            <td>NA</td>
+                            <td>NA</td>
+                        </tr>
+                        <tr>
+                            <td>PLAN</td>
+                            <td>NA</td>
+                            <td>NA</td>
+                        </tr>
+                    </table>
+                </li>
+                <li>
+                    <br>
+                    <img src="img/assignment2/Problem2.5.jpg" alt="Employee-Job, Employee-Benefit and Plan-Benefit relationships">
+                </li>
+                <li>
+                    <br>
+                    <table>
+                        <tr>
+                            <th>TABLE</th>
+                            <th>PRIMARY KEY</th>
+                            <th>FOREIGN KEY(S)</th>
+                        </tr>
+                        <tr>
+                            <td>PRODUCT</td>
+                            <td>PROD_CODE</td>
+                            <td>VEND_CODE</td>
+                        </tr>
+                        <tr>
+                            <td>VENDOR</td>
+                            <td>VEND_CODE</td>
+                            <td>NONE</td>
+                        </tr>
+                    </table>
+                </li>
+                <li>
+                    <br>
+                    <table>
+                        <tr>
+                            <th>TABLE</th>
+                            <th>ENTITY INTEGRITY</th>
+                            <th>EXPLANATION</th>
+                        </tr>
+                        <tr>
+                            <td>PRODUCT</td>
+                            <td>Yes</td>
+                            <td>The primary key (PROD_CODE) uniquely identifies the records</td>
+                        </tr>
+                        <tr>
+                            <td>VENDOR</td>
+                            <td>Yes</td>
+                            <td>The primary key (VEND_CODE) uniquely identifies the records</td>
+                        </tr>
+                    </table>
+                </li>
+                <li>
+                    <br>
+                    <table>
+                        <tr>
+                            <th>TABLE</th>
+                            <th>REFERENTIAL INTEGRITY</th>
+                            <th>EXPLANATION</th>
+                        </tr>
+                        <tr>
+                            <td>PRODUCT</td>
+                            <td>Yes</td>
+                            <td>All foreign key matches its value in the parent table</td>
+                        </tr>
+                        <tr>
+                            <td>VENDOR</td>
+                            <td>NA</td>
+                            <td>NA</td>
+                        </tr>
+                    </table>
+                </li>
+                <li>
+                    <br>
+                    <table>
+                        <tr>
+                            <th>TABLE</th>
+                            <th>PRIMARY KEY</th>
+                            <th>FOREIGN KEY(S)</th>
+                        </tr>
+                        <tr>
+                            <td>TRUCK</td>
+                            <td>TRUCK_NUM</td>
+                            <td>BASE_CODE, TYPE_CODE</td>
+                        </tr>
+                        <tr>
+                            <td>BASE</td>
+                            <td>BASE_CODE</td>
+                            <td>NONE</td>
+                        </tr>
+                        <tr>
+                            <td>TYPE</td>
+                            <td>TYPE_CODE</td>
+                            <td>NONE</td>
+                        </tr>
+                    </table>
+                </li>
+                <li>
+                    <br>
+                    <table>
+                        <tr>
+                            <th>TABLE</th>
+                            <th>ENTITY INTEGRITY</th>
+                            <th>EXPLANATION</th>
+                        </tr>
+                        <tr>
+                            <td>TRUCK</td>
+                            <td>Yes</td>
+                            <td>The primary key (TRUCK_NUM) uniquely identifies the records</td>
+                        </tr>
+                        <tr>
+                            <td>BASE</td>
+                            <td>Yes</td>
+                            <td>The primary key (BASE_CODE) uniquely identifies the records</td>
+                        </tr>
+                        <tr>
+                            <td>TYPE</td>
+                            <td>Yes</td>
+                            <td>The primary key (TYPE_CODE) uniquely identifies the records</td>
+                        </tr>
+                    </table>
+                </li>
+                <li>
+                    <br>
+                    <table>
+                        <tr>
+                            <th>TABLE</th>
+                            <th>REFERENTIAL INTEGRITY</th>
+                            <th>EXPLANATION</th>
+                        </tr>
+                        <tr>
+                            <td>TRUCK</td>
+                            <td>Yes</td>
+                            <td>All foreign key is either null or matches its value in the parent table</td>
+                        </tr>
+                        <tr>
+                            <td>BASE</td>
+                            <td>NA</td>
+                            <td>NA</td>
+                        </tr>
+                        <tr>
+                            <td>TYPE</td>
+                            <td>NA</td>
+                            <td>NA</td>
+                        </tr>
+                    </table>
+                </li>
+                <li>The TRUCK table’s candidate key is TRUCK_NUM.</li>
+                <li>
+                    <br>
+                    <img src="img/assignment2/Problem2.13.jpg" alt="Truck-Base and Truck-Type relationships">
+                </li>
+                <li>
+                    <br>
+                    <table>
+                        <tr>
+                            <th>TABLE</th>
+                            <th>PRIMARY KEY</th>
+                            <th>FOREIGN KEY(S)</th>
+                        </tr>
+                        <tr>
+                            <td>CHARTER</td>
+                            <td>CHAR_TRIP</td>
+                            <td>CHAR_PILOT, CHAR_COPILOT, AC_NUMBER, CUS_CODE</td>
+                        </tr>
+                        <tr>
+                            <td>AIRCRAFT</td>
+                            <td>AC_NUMBER</td>
+                            <td>MOD_CODE</td>
+                        </tr>
+                        <tr>
+                            <td>MODEL</td>
+                            <td>MOD_CODE</td>
+                            <td>NONE</td>
+                        </tr>
+                        <tr>
+                            <td>PILOT</td>
+                            <td>EMP_NUM</td>
+                            <td>NONE</td>
+                        </tr>
+                        <tr>
+                            <td>EMPLOYEE</td>
+                            <td>EMP_NUM</td>
+                            <td>NONE</td>
+                        </tr>
+                        <tr>
+                            <td>CUSTOMER</td>
+                            <td>CUS_CODE</td>
+                            <td>NONE</td>
+                        </tr>
+                    </table>
+                </li>
+                <li>
+                    <br>
+                    <img src="img/assignment2/Problem2.15.jpg" alt="Relationships between the tables in question 14">
+                </li>
+            </ol>
+        </div>
+    </main>
+
+    <footer>
+
+    </footer>
+</body>
