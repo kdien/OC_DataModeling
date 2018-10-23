@@ -21,6 +21,10 @@ main div {
   margin-bottom: 1em;
 }
 
+main div#assignment3 h2, main div#assignment4 h2 {
+  margin-top: .8em;
+}
+
 main h1 {
   padding-top: 1rem !important;
 }
