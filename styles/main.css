@@ -15,12 +15,12 @@ header h1 {
 }
 
 .navbar .nav-link:hover {
-  color: #FBBC05;
+  color: #fbbc05;
 }
 
 .navbar .nav-link.active {
-  color: #FBBC05;
-  border-bottom: 2px solid #FBBC05;
+  color: #fbbc05;
+  border-bottom: 2px solid #fbbc05;
 }
 
 main {
@@ -63,7 +63,7 @@ main table {
   padding-right: 2em !important;
 }
 
-.thead-dark th {
+main table .thead-dark th {
   background: #525457 !important;
 }
 /*# sourceMappingURL=main.css.map */
