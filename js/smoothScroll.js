@@ -10,9 +10,7 @@ $(document).ready(function() {
             var scrollToPosition = $(target).offset().top - 60;
     
             // Use the number to specify milliseconds to reach the anchored point
-            $("html").animate({
-                "scrollTop": scrollToPosition
-            }, 800, function() {
+            $("html").animate({"scrollTop": scrollToPosition}, 800, function() {
                 window.location.hash = target;
                 $("html").animate({"scrollTop": scrollToPosition}, 0);
             });
