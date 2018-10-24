@@ -14,27 +14,29 @@ header {
 
 .navbar .nav-link {
     color: white;
-    &.active, &:hover {
+    &:hover {
         color: #FBBC05;
+    }
+    &.active {
+        color: #FBBC05;
+        border-bottom: 2px solid #FBBC05;
     }
 }
 
 main {
     width: 80%;
     margin: 1em auto;
-    div {
-        background: white;
+    #assignment1, #assignment2, #assignment3, #assignment4 {
         padding: 0 1.5em 1.5em 1.5em;
-        border-radius: 8px;
         margin-bottom: 1em;
-    }
-    div#assignment3, div#assignment4 {
-        h2 {
-            margin-top: .8em;
-        }
+        background: white;
+        border-radius: 8px;
     }
     h1 {
         padding-top: 1rem !important;
+    }
+    h2 {
+        margin-top: .6em;
     }
     img {
         max-width: 100%;

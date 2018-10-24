@@ -14,8 +14,13 @@ header h1 {
   color: white;
 }
 
-.navbar .nav-link.active, .navbar .nav-link:hover {
+.navbar .nav-link:hover {
   color: #FBBC05;
+}
+
+.navbar .nav-link.active {
+  color: #FBBC05;
+  border-bottom: 2px solid #FBBC05;
 }
 
 main {
@@ -23,19 +28,19 @@ main {
   margin: 1em auto;
 }
 
-main div {
-  background: white;
+main #assignment1, main #assignment2, main #assignment3, main #assignment4 {
   padding: 0 1.5em 1.5em 1.5em;
-  border-radius: 8px;
   margin-bottom: 1em;
-}
-
-main div#assignment3 h2, main div#assignment4 h2 {
-  margin-top: .8em;
+  background: white;
+  border-radius: 8px;
 }
 
 main h1 {
   padding-top: 1rem !important;
+}
+
+main h2 {
+  margin-top: .6em;
 }
 
 main img {
