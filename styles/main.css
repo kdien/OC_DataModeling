@@ -1,5 +1,6 @@
 body {
   background: #dcdddf;
+  position: relative;
 }
 
 header h1 {
@@ -7,6 +8,14 @@ header h1 {
   padding-top: 1rem;
   padding-bottom: 1rem;
   text-align: center;
+}
+
+.navbar .nav-link {
+  color: white;
+}
+
+.navbar .nav-link.active, .navbar .nav-link:hover {
+  color: #FBBC05;
 }
 
 main {
@@ -51,9 +60,5 @@ main table {
 
 .thead-dark th {
   background: #525457 !important;
-}
-
-a.text-light:focus, a.text-light:hover {
-  color: #FBBC05 !important;
 }
 /*# sourceMappingURL=main.css.map */
